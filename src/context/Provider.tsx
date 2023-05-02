@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {  ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { pokeContext } from ".";
 
 type Children = {
   children: ReactNode;
 };
 
-type Poke = {
+export type Poke = {
   name: string;
   url: string;
 };
@@ -52,19 +52,11 @@ export default function Provider({ children }: Children) {
       .catch((error) => error.message);
   }
 
-  function handleFilterChange(pokemon: Poke) {
-    const filterPokemonByName = pokemons.filter((poke) => {
-      return poke.name === pokemon.name;
-    });
-
-    setPokemons(filterPokemonByName)
-  }
-
   const value = {
     pokemons,
     handlePokemonClick,
     selectedPokemon,
-    handleFilterChange
+    setPokemons
   };
 
   return <pokeContext.Provider value={value}>{children}</pokeContext.Provider>;
