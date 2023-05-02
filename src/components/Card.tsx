@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Link } from "react-router-dom";
 import "../style/Card.css";
 
 type Props = {
   name: string;
   url: string;
-  onClick: never;
+  onClick: any;
   img: string;
   weigth: string;
   height: string;
