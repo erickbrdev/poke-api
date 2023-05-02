@@ -1,4 +1,5 @@
-import { ChangeEvent, ReactNode, useEffect, useState } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import {  ReactNode, useEffect, useState } from "react";
 import { pokeContext } from ".";
 
 type Children = {

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext } from "react";
 import { pokeContext } from "../context";
 import { Link } from "react-router-dom";

@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { pokeContext } from "../context";
+import React, { useState } from "react";
+
 
 export default function Filter() {
   const [searchValue, setSearchValue] = useState<string>("");

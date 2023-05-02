@@ -4,7 +4,7 @@ import "../style/Card.css";
 type Props = {
   name: string;
   url: string;
-  onClick: any;
+  onClick: never;
   img: string;
   weigth: string;
   height: string;
@@ -13,7 +13,7 @@ type Props = {
 };
 
 export default function Card(props: Props) {
-  const { name, url, onClick, img, weigth, height, type, titleBtn } = props;
+  const { name, onClick, img, weigth, height, type, titleBtn } = props;
 
   return (
     <div className="card">
