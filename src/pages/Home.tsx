@@ -4,19 +4,22 @@ import { pokeContext } from "../context";
 import { Link } from "react-router-dom";
 import Filter from "../components/Filter";
 
+import "../mobile/Home.css"
+import Footer from "../components/Footer";
+
 export default function Home() {
   const { pokemons, handlePokemonClick } = useContext<any>(pokeContext);
 
   return (
     <main>
-      <section className="flex flex-col gap-5 justify-center h-32 items-center bg-violet-700 border-b-2 borde-gray-500">
+      <section className="flex flex-col gap-5 justify-center h-44 items-center bg-violet-700 border-b-2 borde-gray-500 header-mobile">
         <h1 className="text-2xl border-b-2 border-violet-950 text-violet-300 font-semibold">
           Escolha seu pokemon, treinador!
         </h1>
         <Filter />
       </section>
 
-      <section className="bg-violet-500 flex flex-wrap gap-7 items-center justify-center p-5">
+      <section className="bg-violet-500 flex flex-wrap gap-7 items-center justify-center p-5 h-max">
         {pokemons.slice(0, 100).map((pokemon: any, index: number) => {
           return (
             <div
@@ -44,6 +47,7 @@ export default function Home() {
           );
         })}
       </section>
+      <Footer />
     </main>
   );
 }
